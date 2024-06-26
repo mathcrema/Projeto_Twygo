@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: dbcursos
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+
+  api:
+    build: ./fastApiProject
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:password@db:5432/dbcursos
+    depends_on:
+      - db
+    networks:
+      - my_network
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+
+volumes:
+  db_data:

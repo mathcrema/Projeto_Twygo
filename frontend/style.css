@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: #793bc0;
+}
+
+.botoẽs {
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.curso-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.curso-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;  
+  height: 100%;
+  width: 100%;
+}
+
+.curso {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  width: 350px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curso:hover {
+  transform: translateY(-5px);
+}
+
+.curso h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.curso p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+button {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px auto;
+  width: 150px;
+  height: 40px;
+  background-color: #f0bf4c;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+  color: #542d9e;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  margin-top: 15px;
+  background-color: #793bc0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+form button:hover {
+  background-color: #ccc;
+  color: #542d9e;
+}
+
+.btn-salvar-edicao{
+  width:150px;
+  height:50px;
+}
+
+#container-botao-editar {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.editar-icon-btn {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0bf4c;
+  color: black;
+  border: none;
+  width: max-content;
+  padding: 8px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.titulo-editar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-editar h2 {
+  display: inline; /* Manter o título inline */
+  margin-right: 10px; /* Espaçamento entre o título e o botão de edição */
+}
+
+.editar-icon-btn:hover {
+  color: #007bff; /* Cor do ícone ao passar o mouse */
+}
+#btn-ordenar {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#btn-ordenar i {
+  font-size: 24px; /* Tamanho do ícone */
+  color: #000; /* Cor do ícone */
+}
+
+#btn-ordenar:hover i {
+  color: #542d9e; /* Cor do ícone ao passar o mouse */
+}

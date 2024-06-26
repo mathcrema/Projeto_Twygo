@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos Ativos - Threewygo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="botoẽs">
+    <button id="btn-cadastrar">Cadastrar Curso</button>
+    <button id="btn-ordenar">
+      <i class="bi bi-funnel"></i> <!-- Ícone de filtro -->
+    </button>
+        <button id="btn-buscar-data">Buscar por Data</button>
+  </div>
+  <h1>Cursos Ativos da Threewygo</h1>
+  <div id="curso-lista" class="curso-lista">
+    <!-- Aqui serão inseridos os cursos dinamicamente -->
+  </div>
+
+  <!-- Modal de Ordenação -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ordenar por Data</h2>
+      <div id="modal-body">
+        <label for="select-ordem">Selecione a ordem:</label>
+        <select id="select-ordem">
+          <option value="asc">Crescente</option>
+          <option value="desc">Decrescente</option>
+        </select>
+        <button id="btn-ordenar-modal">Ordenar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Busca por Data -->
+  <div id="modal-busca" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Buscar por Data</h2>
+      <div id="modal-body-busca">
+        <label for="data-busca">Digite a data desejada:</label>
+        <input type="date" id="data-busca" name="data-busca" required />
+        <button id="btn-buscar">Buscar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro -->
+  <div id="cadastro-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="cadastro-body">
+        <h2>Cadastrar Novo Curso</h2>
+        <form id="cadastro-form">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required />
+          <label for="descricao">Descrição:</label>
+          <textarea id="descricao" name="descricao" required></textarea>
+          <label for="dataTermino">Data de Término:</label>
+          <input type="date" id="dataTermino" name="dataTermino" required />
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Edição -->
+  <div id="edicao-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="edicao-body">
+        <h2>Editar Curso</h2>
+        <form id="edicao-form">
+          <label for="edicao-titulo">Título:</label>
+          <input type="text" id="edicao-titulo" name="edicao-titulo" required />
+          <label for="edicao-descricao">Descrição:</label>
+          <textarea id="edicao-descricao" name="edicao-descricao" required></textarea>
+          <label for="edicao-dataTermino">Data de Término:</label>
+          <input type="date" id="edicao-dataTermino" name="edicao-dataTermino" required />
+          <button id="btn-salvar-edicao" class="btn-salvar-edicao">Salvar Alterações</button>
+          <button id="btn-fechar-edicao">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal de Detalhes -->
+    <div id="detalhes-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="btn-fechar-detalhes">&times;</span>
+        <h2>Detalhes do Curso</h2>
+        <div>
+          <h3 id="detalhes-titulo"></h3>
+          <p id="detalhes-descricao"></p>
+          <p><strong>Data de Término:</strong> <span id="detalhes-dataTermino"></span></p>
+        </div>
+      </div>
+    </div>
+  
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
